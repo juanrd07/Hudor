@@ -1,172 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hudor | Smart Water Dispensers</title>
-  <meta name="description" content="Hudor provides IoT-based smart water dispensers offering affordable, clean drinking water while reducing plastic waste." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hudor | Smart Water Dispensers</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #0f172a;
-      background-color: #f8fafc;
-      line-height: 1.6;
-    }
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    header {
-      background: linear-gradient(135deg, #0284c7, #0ea5e9);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
+<style>
+* { box-sizing: border-box; }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
 
-    header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(2,132,199,.6), rgba(2,132,199,.6)),
+  url("https://images.unsplash.com/photo-1559827260-dc66d52bef19") center/cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 30px;
-      background: white;
-      color: #0284c7;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
-    }
+.hero h1 {
+  font-size: 3.5rem;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.hero p {
+  max-width: 650px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+}
 
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
+.btn {
+  background: white;
+  color: #0284c7;
+  padding: 15px 35px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
+.btn:hover {
+  background: #e0f2fe;
+  transform: scale(1.05);
+}
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    }
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-    .card h3 {
-      margin-top: 0;
-      color: #0284c7;
-    }
+h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+}
 
-    .impact {
-      background-color: #e0f2fe;
-      text-align: center;
-    }
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
 
-    footer {
-      background: #020617;
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,.08);
+  transition: 0.4s;
+}
 
-    footer a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-  </style>
+.card:hover {
+  transform: translateY(-12px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+/* IMPACT */
+.impact {
+  background: #e0f2fe;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #0284c7, #38bdf8);
+  color: white;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background: #020617;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 </head>
 <body>
 
-<header>
-  <h1>HUDOR</h1>
-  <p>
-    Smart IoT-based water dispensers providing clean drinking water at affordable prices —
-    while reducing plastic waste. Bring your own bottle. Refill smarter.
-  </p>
-  <a href="#contact" class="btn">Request a Pilot</a>
-</header>
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>HUDOR</h1>
+    <p>IoT-powered water dispensers providing affordable, clean drinking water while eliminating plastic waste.</p>
+    <a href="#contact" class="btn">Request a Pilot</a>
+  </div>
+</div>
 
-<section>
+<!-- FEATURES -->
+<section class="reveal">
   <h2>Why Hudor?</h2>
   <div class="grid">
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504" alt="">
       <h3>💧 Affordable Water</h3>
-      <p>Get safe drinking water at a fraction of bottled water costs using pay-per-use pricing.</p>
+      <p>Pay per refill at a fraction of bottled water prices.</p>
     </div>
     <div class="card">
-      <h3>📡 IoT Powered</h3>
-      <p>Real-time monitoring of water quality, usage, and system health.</p>
+      <img src="https://images.unsplash.com/photo-1581092918367-7d8a7a1f6b9c" alt="">
+      <h3>📡 Smart IoT</h3>
+      <p>Real-time monitoring for quality, flow, and maintenance.</p>
     </div>
     <div class="card">
+      <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6" alt="">
       <h3>♻️ Zero Plastic</h3>
-      <p>Bring your own bottle and help eliminate single-use plastic waste.</p>
-    </div>
-    <div class="card">
-      <h3>🏙️ Scalable</h3>
-      <p>Perfect for campuses, offices, public spaces, smart cities, and transit hubs.</p>
+      <p>Bring your own bottle. Reduce single-use plastic waste.</p>
     </div>
   </div>
 </section>
 
-<section class="impact">
+<!-- IMPACT -->
+<section class="impact reveal">
   <h2>Our Impact</h2>
   <div class="grid">
     <div class="card">
       <h3>🌍 Sustainability</h3>
-      <p>Reducing plastic bottle usage and carbon footprint.</p>
+      <p>Millions of plastic bottles eliminated.</p>
     </div>
     <div class="card">
       <h3>🚰 Accessibility</h3>
-      <p>Making clean drinking water easily available to everyone.</p>
+      <p>Clean water available 24/7 in public spaces.</p>
     </div>
     <div class="card">
       <h3>💰 Savings</h3>
-      <p>Lower daily water expenses for users and communities.</p>
+      <p>Up to 70% cheaper than bottled water.</p>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <h2>Get In Touch</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>📩 Contact</h3>
-      <p>Email: <strong>hello@hudorwater.com</strong></p>
-      <p>Website: <strong>www.hudorwater.com</strong></p>
-      <p>Launching Soon 🚀</p>
-    </div>
-    <div class="card">
-      <h3>🤝 Partner With Us</h3>
-      <p>We’re looking for city authorities, campuses, and early adopters to pilot Hudor dispensers.</p>
-    </div>
-  </div>
+<!-- CTA -->
+<section class="cta reveal" id="contact">
+  <h2>Join the Water Revolution</h2>
+  <p>Bring your bottle. Refill smarter. Save money. Save the planet.</p>
+  <a class="btn" href="mailto:hello@hudorwater.com">Contact Us</a>
 </section>
 
 <footer>
-  <p>© 2025 Hudor. Clean Water. Smart Living.</p>
-  <p>
-    Follow us on
-    <a href="#">LinkedIn</a> •
-    <a href="#">Instagram</a>
-  </p>
+  <p>© 2025 Hudor | Clean Water. Smart Living.</p>
 </footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
+
