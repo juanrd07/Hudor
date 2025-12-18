@@ -3,14 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hudor | Smart Water Dispensers</title>
+<title>Hudor | Smart Water Infrastructure</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 * { box-sizing: border-box; }
-
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -20,107 +18,81 @@ body {
 
 /* HERO */
 .hero {
-  height: 100vh;
-  background: linear-gradient(rgba(2,132,199,.6), rgba(2,132,199,.6)),
+  min-height: 100vh;
+  background: linear-gradient(rgba(2,132,199,.7), rgba(2,132,199,.7)),
   url("https://images.unsplash.com/photo-1559827260-dc66d52bef19") center/cover;
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding: 40px;
 }
-
-.hero h1 {
-  font-size: 3.5rem;
-}
-
-.hero p {
-  max-width: 650px;
-  margin: 20px auto;
-  font-size: 1.2rem;
-}
-
+.hero h1 { font-size: 3.8rem; }
+.hero p { max-width: 800px; margin: 25px auto; font-size: 1.3rem; }
 .btn {
   background: white;
   color: #0284c7;
-  padding: 15px 35px;
-  border-radius: 40px;
+  padding: 15px 40px;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
 }
+.btn:hover { transform: scale(1.07); }
 
-.btn:hover {
-  background: #e0f2fe;
-  transform: scale(1.05);
-}
-
-/* SECTIONS */
+/* GENERAL */
 section {
-  padding: 80px 20px;
+  padding: 90px 25px;
   max-width: 1200px;
   margin: auto;
 }
-
 h2 {
   text-align: center;
-  font-size: 2.3rem;
-  margin-bottom: 50px;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
-
-/* CARDS */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
-
 .card {
   background: white;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0,0,0,.08);
-  transition: 0.4s;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 20px 35px rgba(0,0,0,.08);
+  transition: .4s;
 }
+.card:hover { transform: translateY(-15px); }
 
-.card:hover {
-  transform: translateY(-12px);
-}
+/* SECTIONS */
+.alt { background: #e0f2fe; }
+.timeline li { margin-bottom: 15px; }
 
-.card img {
-  width: 100%;
+/* FAQ */
+details {
+  background: white;
+  padding: 20px;
   border-radius: 15px;
   margin-bottom: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.05);
 }
-
-/* IMPACT */
-.impact {
-  background: #e0f2fe;
-}
-
-/* CTA */
-.cta {
-  background: linear-gradient(135deg, #0284c7, #38bdf8);
-  color: white;
-  text-align: center;
-}
+summary { cursor: pointer; font-weight: 600; }
 
 /* FOOTER */
 footer {
   background: #020617;
   color: white;
   text-align: center;
-  padding: 40px;
+  padding: 50px 20px;
 }
 
-/* SCROLL ANIMATION */
+/* SCROLL */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(50px);
   transition: 1s;
 }
-
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
@@ -131,77 +103,155 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
-  <div>
+  <div class="reveal">
     <h1>HUDOR</h1>
-    <p>IoT-powered water dispensers providing affordable, clean drinking water while eliminating plastic waste.</p>
-    <a href="#contact" class="btn">Request a Pilot</a>
+    <p>
+      Hudor is building smart, IoT-powered water infrastructure to make clean drinking
+      water affordable, accessible, and sustainable — without plastic waste.
+    </p>
+    <a class="btn" href="#contact">Launch a Pilot</a>
   </div>
 </div>
 
-<!-- FEATURES -->
+<!-- PROBLEM -->
 <section class="reveal">
-  <h2>Why Hudor?</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504" alt="">
-      <h3>💧 Affordable Water</h3>
-      <p>Pay per refill at a fraction of bottled water prices.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581092918367-7d8a7a1f6b9c" alt="">
-      <h3>📡 Smart IoT</h3>
-      <p>Real-time monitoring for quality, flow, and maintenance.</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1611078489935-0cb964de46d6" alt="">
-      <h3>♻️ Zero Plastic</h3>
-      <p>Bring your own bottle. Reduce single-use plastic waste.</p>
-    </div>
+<h2>The Problem</h2>
+<div class="grid">
+  <div class="card">
+    <h3>🚯 Plastic Waste</h3>
+    <p>Billions of plastic bottles are used every year, clogging landfills and oceans.</p>
   </div>
+  <div class="card">
+    <h3>💸 High Costs</h3>
+    <p>Bottled water costs up to 10x more than actual purification and distribution.</p>
+  </div>
+  <div class="card">
+    <h3>🚱 Limited Access</h3>
+    <p>Clean drinking water is not easily available in public spaces.</p>
+  </div>
+</div>
 </section>
 
-<!-- IMPACT -->
-<section class="impact reveal">
-  <h2>Our Impact</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>🌍 Sustainability</h3>
-      <p>Millions of plastic bottles eliminated.</p>
-    </div>
-    <div class="card">
-      <h3>🚰 Accessibility</h3>
-      <p>Clean water available 24/7 in public spaces.</p>
-    </div>
-    <div class="card">
-      <h3>💰 Savings</h3>
-      <p>Up to 70% cheaper than bottled water.</p>
-    </div>
+<!-- SOLUTION -->
+<section class="alt reveal">
+<h2>Our Solution</h2>
+<p style="text-align:center; max-width:900px; margin:auto;">
+Hudor deploys a network of smart water dispensers connected through IoT technology.
+Users bring their own bottles, pay per refill, and get instant access to safe,
+affordable drinking water — anytime, anywhere.
+</p>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="reveal">
+<h2>How It Works</h2>
+<div class="grid">
+  <div class="card">
+    <h3>1️⃣ Smart Dispensers</h3>
+    <p>Installed in campuses, offices, stations, malls, and public areas.</p>
   </div>
+  <div class="card">
+    <h3>2️⃣ Real-Time Monitoring</h3>
+    <p>Sensors track water quality, flow rate, usage, and system health.</p>
+  </div>
+  <div class="card">
+    <h3>3️⃣ Easy Payment</h3>
+    <p>Users scan, tap, or pay digitally for each refill.</p>
+  </div>
+</div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="alt reveal">
+<h2>Technology Stack</h2>
+<div class="grid">
+  <div class="card">
+    <h3>📡 IoT Sensors</h3>
+    <p>TDS, flow, temperature, and pressure monitoring.</p>
+  </div>
+  <div class="card">
+    <h3>☁️ Cloud Platform</h3>
+    <p>Centralized dashboard for analytics, alerts, and optimization.</p>
+  </div>
+  <div class="card">
+    <h3>🔐 Security</h3>
+    <p>Secure payments, encrypted data, and tamper alerts.</p>
+  </div>
+</div>
+</section>
+
+<!-- BUSINESS MODEL -->
+<section class="reveal">
+<h2>Business Model</h2>
+<div class="grid">
+  <div class="card">
+    <h3>💧 Pay-Per-Use</h3>
+    <p>Affordable pricing per liter for users.</p>
+  </div>
+  <div class="card">
+    <h3>🏙️ B2B & Government</h3>
+    <p>Partnerships with campuses, cities, and companies.</p>
+  </div>
+  <div class="card">
+    <h3>📊 Data Insights</h3>
+    <p>Analytics for infrastructure planning and efficiency.</p>
+  </div>
+</div>
+</section>
+
+<!-- ROADMAP -->
+<section class="alt reveal">
+<h2>Roadmap</h2>
+<ul class="timeline">
+  <li>✅ Prototype Development</li>
+  <li>🔄 Pilot Deployments</li>
+  <li>📈 City-Level Expansion</li>
+  <li>🌍 Nationwide Network</li>
+</ul>
+</section>
+
+<!-- FAQ -->
+<section class="reveal">
+<h2>FAQs</h2>
+<details>
+  <summary>Is the water safe?</summary>
+  <p>Yes. Hudor continuously monitors water quality and meets safety standards.</p>
+</details>
+<details>
+  <summary>How much does it cost?</summary>
+  <p>Significantly cheaper than bottled water — pricing depends on location.</p>
+</details>
+<details>
+  <summary>Where will Hudor be available?</summary>
+  <p>Public spaces, campuses, offices, transport hubs, and smart cities.</p>
+</details>
 </section>
 
 <!-- CTA -->
-<section class="cta reveal" id="contact">
-  <h2>Join the Water Revolution</h2>
-  <p>Bring your bottle. Refill smarter. Save money. Save the planet.</p>
-  <a class="btn" href="mailto:hello@hudorwater.com">Contact Us</a>
+<section id="contact" class="alt reveal">
+<h2>Partner With Hudor</h2>
+<p style="text-align:center;">
+Looking to pilot Hudor dispensers in your city or campus?
+</p>
+<p style="text-align:center;">
+<a class="btn" href="mailto:hello@hudorwater.com">Contact Us</a>
+</p>
 </section>
 
 <footer>
-  <p>© 2025 Hudor | Clean Water. Smart Living.</p>
+<p>© 2025 Hudor | Smart Water Infrastructure</p>
 </footer>
 
 <script>
-  const reveals = document.querySelectorAll('.reveal');
-  window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-      const top = el.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        el.classList.add('active');
-      }
-    });
+const reveals = document.querySelectorAll('.reveal');
+window.addEventListener('scroll', () => {
+  reveals.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add('active');
+    }
   });
+});
 </script>
 
 </body>
 </html>
-
